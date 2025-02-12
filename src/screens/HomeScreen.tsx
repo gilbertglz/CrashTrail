@@ -27,7 +27,7 @@ const HomeScreen: React.FC = () => {
   }, []); // Runs only once on component mount
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.backgroundColor }]}>
+    <View style={[styles.container, { backgroundColor: theme.secondaryDarkBlue }]}>
         <Text style={[styles.text, { color: theme.textColor }]}>
           Home Screen
         </Text>

@@ -15,7 +15,7 @@ export const darkColors = {
   tabColor: "#2c3e50",
   secondaryDarkBlue: "#4A6E8D",
   lightBlue: "#A4C8E1",
-  textColor: "#F0F0F0",  // Text color for dark mode
+  textColor: "#E0E1DD",  // Text color for dark mode
   buttonBackground: "#8e44ad",  // Button background for dark mode
   buttonText: "#ffffff",  // Button text color for dark mode
 };
