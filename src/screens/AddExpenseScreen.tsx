@@ -10,6 +10,13 @@ const AddExpenseScreen: React.FC = () => {
   const [price, setPrice] = useState('');
   const [category, setCategory] = useState('');
   const [notes, setNote] = useState('');
+  const handleSubmitExpense = () =>{
+      console.log(name, price, category, notes);
+      setName('');
+      setPrice('');
+      setCategory('');
+      setNote('');
+  };
 
   useEffect(() => {
     const colorScheme = Appearance.getColorScheme(); // Get the system color scheme (light or dark)
@@ -39,7 +46,7 @@ const AddExpenseScreen: React.FC = () => {
         <FormRow label="Category" value={category} onChange={setCategory} type="text" />
         <FormRow label="Notes" value={notes} onChange={setNote} type="text" />
         
-        <Button title='Add Expense' onPress={() => console.log("Button Pressed")}/>
+        <Button title='Add Expense' onPress={handleSubmitExpense}/>
       </View>
     </TouchableWithoutFeedback>
   );
