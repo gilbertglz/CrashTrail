@@ -22,8 +22,8 @@ const TabNavigator: React.FC<TabNavigatorProps> = () => {
 
   return (
     <NavigationContainer>
-
       <Tab.Navigator
+      initialRouteName='Add Expense'
         screenOptions={({ route }) => ({
           tabBarStyle: {
             height: 115,
@@ -48,16 +48,6 @@ const TabNavigator: React.FC<TabNavigatorProps> = () => {
           },
         })}
       >
-
-        <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            headerStyle: { backgroundColor: theme.backgroundColor },
-            headerTintColor: theme.textColor,
-          }}
-        />
-
         <Tab.Screen
           name="Add Expense"
           component={AddExpenseScreen}
@@ -66,9 +56,15 @@ const TabNavigator: React.FC<TabNavigatorProps> = () => {
             headerTintColor: theme.textColor,
           }}
         />
-
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            headerStyle: { backgroundColor: theme.backgroundColor },
+            headerTintColor: theme.textColor,
+          }}
+        />
       </Tab.Navigator>
-      
     </NavigationContainer>
   );
 };

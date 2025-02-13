@@ -48,9 +48,10 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 25,
     borderBottomWidth: 1,
     borderColor: '#ccc',
+
   },
   label: {
     flex: 1,
