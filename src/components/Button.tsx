@@ -13,9 +13,10 @@ const Button: React.FC<ButtonProps> = ({ title, onPress }) => {
   return (
     <TouchableOpacity
       style={[styles.button, { backgroundColor: theme.buttonBackground }]}  // Dynamically set background color
-      onPress={onPress}
-    >
-      <Text style={[styles.text, { color: theme.buttonText }]}>{title}</Text>  // Dynamically set text color
+      onPress={onPress}>
+      <Text style={[styles.text, { color: theme.buttonText }]}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -25,9 +26,10 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 8,
     alignItems: 'center',
+    marginVertical: 35
   },
   text: {
-    fontSize: 16,
+    fontSize: 24,
     fontWeight: 'bold',
   },
 });
