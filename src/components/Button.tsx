@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { useTheme } from '../hooks/ThemeContext';  // Import the useTheme hook
+import { darkColors } from '../constants/colors';
 
 type ButtonProps = {
   title: string;
@@ -14,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({ title, onPress }) => {
     <TouchableOpacity
       style={[styles.button, { backgroundColor: theme.buttonBackground }]}  // Dynamically set background color
       onPress={onPress}>
-      <Text style={[styles.text, { color: theme.buttonText }]}>
+      <Text style={[styles.text]}>
         {title}
       </Text>
     </TouchableOpacity>
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: darkColors.textColor
   },
 });
 
